@@ -9,7 +9,13 @@ export const fetchApi = async (url) => {
     const options = {
       method: 'GET',
       url: "https://realty-in-us.p.rapidapi.com/locations/auto-complete",
-      params: { input: req.query.keyword },
+      params: {
+        city: 'Chicago',
+        state_code: 'Il',
+        offset: '0',
+        limit: '200',
+        sort: 'relevance'
+      },
       headers: {
         'X-RapidAPI-Key': 'f198b1f51cmsh678f55da22750e4p1eb753jsn3ee0e422fc14',
         'X-RapidAPI-Host': 'realty-in-us.p.rapidapi.com'

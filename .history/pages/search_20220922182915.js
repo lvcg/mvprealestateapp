@@ -64,7 +64,7 @@ import { fetchApi, baseUrl } from '../utils/fetchApi' ;
   const sort = query.sort || 'price-desc';
   const areaMax = query.areaMax || '35000';
   const { city, state_code } = location.data.autocomplete[0];
-  
+  const categoryExternalID = query.categoryExternalID || '4';
 
   const data = await fetchApi(`${baseUrl}/properties/v2/list-for-sale=${city}&purpose=${purpose}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`);
 

@@ -54,11 +54,11 @@ export default function Home( { propertiesForSale, propertiesForRent }) {
 
 export async function getStaticProps() {
   const propertyForSale = await fetchApi(`${baseUrl}/properties/v2/list-for-sale`);
-  const propertyForRent = await fetchApi(`${baseUrl}/properties/v2/list-for-rent`);
+  const propertyForRent = await fetchApi(`${baseUrl}#`);
 
   return {
     props: {
-      propertiesForSale: propertyForSale?.hits,
+      propertiesForSale: propertyForSle?.hits,
       propertiesForRent: propertyForRent?.hits,
     }
   }
